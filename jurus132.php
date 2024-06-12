@@ -65,7 +65,7 @@ echo "</textarea>
     <p><div style='text-align: center;'>
         <input class='btn btn-primary mb-2' type='button' value='KEMBALI' onclick='javascript:history.back()' />
     </div></p>
-    <br><div class='jurus1'>Power By korong</div></br>
+    <br><div class='jurus1'>Power By tolol</div></br>
 </form>
 </body>
 </html>";
