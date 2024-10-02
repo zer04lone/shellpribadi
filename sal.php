@@ -1,5 +1,3 @@
-gas.php
-
 <?php 
 
 $GLOBALS['DB_NAME']=array(
